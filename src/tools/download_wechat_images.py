@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-下载微信公众号文章中的图片到docs目录
+下载微信公众号文章中的图片到指定目录
 """
 
 import requests
