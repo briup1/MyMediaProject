@@ -154,8 +154,7 @@ def get_file_extension_from_url(url: str) -> str:
 if __name__ == "__main__":
     # 测试下载功能
     test_urls = [
-        "https://example.com/image1.jpg",
-        "https://example.com/image2.png"
+        "替换为实际的图片URLs"
     ]
     
     test_dir = Path("/tmp/test_download")

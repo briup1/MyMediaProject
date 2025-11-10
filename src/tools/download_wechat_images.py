@@ -92,7 +92,7 @@ def download_wechat_images(url, output_dir='docs'):
 
 if __name__ == '__main__':
     # 微信公众号文章URL
-    wechat_url = 'https://mp.weixin.qq.com/s/WGFR_Rk037Wlk8cJmWI-vw'
+    wechat_url = '替换为实际的微信公众号文章URL'
     
     print('=== 微信公众号图片下载工具 ===')
     print(f'目标URL: {wechat_url}')
