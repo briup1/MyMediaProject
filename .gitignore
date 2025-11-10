@@ -5,7 +5,7 @@ build/
 dist/
 wheels/
 *.egg-info
-文案生成/*
+# 文案生成/*
 
 
 # Virtual environments
