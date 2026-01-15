@@ -75,14 +75,44 @@ cp personas/示例人设.md personas/我的人设.md
 
 ### 3. 开始创作
 
+**推荐使用一站式流程**（新功能）：
+
 ```bash
-# 创建第一个帖子
-/xhs:create-post
+# 一站式创作流程（推荐）
+/xhs:workflow
+
+# 首次使用时会引导配置人设、风格、账号等
+# 配置完成后，后续创作会自动使用，大幅减少重复操作
+```
+
+**或者使用分步流程**：
+
+```bash
+# 1. 分析选题
+/xhs:analyze-trending
+
+# 2. 创建帖子
+/xhs:create-post --topic "选题"
+
+# 3. 优化内容
+/xhs:optimize-post --file "路径/content.md"
+
+# 4. 生成配图
+/xhs:generate-images --post "路径/content.md"
+
+# 5. 发布到平台
+/xhs:publish --post "路径"
 ```
 
 ## 命令列表
 
-### 帖子创作
+### 🚀 一站式流程（推荐）
+
+| 命令 | 功能 | 优势 |
+|------|------|------|
+| `/xhs:workflow` | 从选题到发布的完整流程 | 交互次数减少81%，一键完成全流程 |
+
+### 📝 分步流程
 
 | 命令 | 功能 |
 |------|------|
@@ -91,12 +121,6 @@ cp personas/示例人设.md personas/我的人设.md
 | `/xhs:analyze-url` | 分析URL/图片/文本 |
 
 ### 内容优化
-
-| 命令 | 功能 |
-|------|------|
-| `/xhs:optimize-post` | 审核和优化帖子 |
-
-### 配图生成
 
 | 命令 | 功能 |
 |------|------|
