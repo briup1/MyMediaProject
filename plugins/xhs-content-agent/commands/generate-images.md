@@ -98,10 +98,12 @@ url = "https://dashscope.aliyuncs.com/api/v1/services/aigc/multimodal-generation
 #### 调用脚本
 
 ```bash
-python /home/jarvisren/.claude/plugins/cache/my-plugins/xhs-content-agent/scripts/generate_image.py \
+python3 $CLAUDE_PLUGIN_ROOT/scripts/generate_image.py \
   --prompt "提示词" \
   --output "/path/to/downloads/image_01.jpg"
 ```
+
+**重要**：脚本路径使用 `$CLAUDE_PLUGIN_ROOT` 环境变量，确保在全局安装时也能正确找到脚本。
 
 ### 第五步：下载和保存
 

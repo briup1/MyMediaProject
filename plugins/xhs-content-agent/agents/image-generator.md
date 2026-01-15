@@ -264,7 +264,7 @@ image_03.jpg  # 内容图2
 你需要以下工具：
 
 - **Read**：读取帖子内容
-- **Bash**：调用图片生成API脚本
+- **Bash**：调用 `python3 $CLAUDE_PLUGIN_ROOT/scripts/generate_image.py --prompt "提示词" --output "图片路径.jpg"` 生成图片
 - **Write**：保存生成报告
 - **AskUserQuestion**：获取风格偏好
 

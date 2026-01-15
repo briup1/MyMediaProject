@@ -20,9 +20,10 @@ capabilities:
 
 当被要求分析热榜时：
 
-1. **获取热榜数据**（当前为预留接口）
-   - 调用 `scripts/fetch_trending.py` 获取数据
-   - 如果接口未实现，询问用户提供热榜信息
+1. **获取热榜数据**
+   - 使用环境变量 `$CLAUDE_PLUGIN_ROOT` 构建脚本路径
+   - 调用命令：`python3 $CLAUDE_PLUGIN_ROOT/scripts/fetch_trending.py --platform xhs --limit 50`
+   - 解析返回的JSON数据获取热门话题
 
 2. **分析维度**
    - 热度排名和变化趋势
@@ -70,7 +71,8 @@ capabilities:
 ### 4. 人设匹配度分析
 
 1. **读取人设文件**
-   - 从 `personas/` 目录读取指定人设
+   - 使用环境变量 `$CLAUDE_PLUGIN_ROOT` 构建人设路径
+   - 从 `$CLAUDE_PLUGIN_ROOT/personas/` 目录读取指定人设
    - 理解人设定位、风格、目标受众
 
 2. **匹配评估**
@@ -173,14 +175,15 @@ capabilities:
 
 - **Read**：读取人设文件、内容文件
 - **Write**：保存研究报告
-- **Bash**：调用热榜获取脚本、内容提取脚本
+- **Bash**：调用 `python3 $CLAUDE_PLUGIN_ROOT/scripts/fetch_trending.py --platform xhs` 获取热榜数据
 - **AskUserQuestion**：获取用户输入和偏好
 
 ## 注意事项
 
 1. **数据真实性**
-   - 如果热榜接口未实现，明确告知用户
-   - 基于用户提供的数据进行分析
+   - 使用 `fetch_trending.py` 脚本获取真实热榜数据
+   - 脚本路径：`$CLAUDE_PLUGIN_ROOT/scripts/fetch_trending.py`
+   - 基于提供的数据进行分析
 
 2. **评估客观性**
    - 使用统一的评估框架

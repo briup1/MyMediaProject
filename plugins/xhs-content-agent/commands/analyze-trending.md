@@ -30,10 +30,10 @@ allowed-tools:
 调用热榜获取脚本：
 
 ```bash
-python /home/jarvisren/.claude/plugins/cache/my-plugins/xhs-content-agent/scripts/fetch_trending.py --platform <platform>
+python3 $CLAUDE_PLUGIN_ROOT/scripts/fetch_trending.py --platform <platform>
 ```
 
-**注意**：当前热榜接口为预留功能，如果脚本未实现，提示用户提供热榜数据。
+**重要**：脚本路径使用 `$CLAUDE_PLUGIN_ROOT` 环境变量，确保在全局安装时也能正确找到脚本。
 
 ### 第二步：分析热门话题
 

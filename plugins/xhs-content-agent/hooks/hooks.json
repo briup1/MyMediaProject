@@ -1,0 +1,9 @@
+{
+  "SessionStart": [{
+    "matcher": ".*",
+    "hooks": [{
+      "type": "prompt",
+      "prompt": "当 xhs-content-agent 插件激活时，设置以下环境变量供所有组件使用：\n\nCLAUDE_PLUGIN_ROOT=/home/jarvisren/.claude/plugins/xhs-content-agent\n\n这个路径指向插件安装根目录，用于解析：\n- scripts/ 目录：脚本文件\n- personas/ 目录：人设文件\n- agents/ 目录：代理定义\n- commands/ 目录：命令定义\n\n在调用脚本时使用完整路径：\npython3 $CLAUDE_PLUGIN_ROOT/scripts/fetch_trending.py\npython3 $CLAUDE_PLUGIN_ROOT/scripts/generate_image.py\n\n在读取人设时使用完整路径：\n$CLAUDE_PLUGIN_ROOT/personas/人设名称.md\n\n注意：如果插件安装在其他位置，需要相应更新 CLAUDE_PLUGIN_ROOT 的值。"
+    }]
+  }]
+}
