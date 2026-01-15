@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "xiaohongshu-automation": {
+      "command": "uvx",
+      "args": [
+        "--from",
+        "xiaohongshu-automation",
+        "xhs-mcp"
+      ],
+      "disabled": false,
+      "timeout": 60,
+      "transportType": "stdio"
+    }
+  }
+}

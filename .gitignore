@@ -7,6 +7,10 @@ wheels/
 *.egg-info
 # 文案生成/*
 
-
 # Virtual environments
 .venv
+
+# 环境变量配置文件
+.env
+.env.local
+*.png

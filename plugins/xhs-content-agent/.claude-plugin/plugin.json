@@ -1,0 +1,11 @@
+{
+  "name": "xhs-content-agent",
+  "version": "0.1.0",
+  "description": "小红书内容开发与发布插件 - 提供选题研究、帖子生成、内容优化、配图生成和自动发布功能",
+  "author": {
+    "name": "MyMediaProject"
+  },
+  "homepage": "https://github.com/yourusername/MyMediaProject",
+  "keywords": ["xiaohongshu", "content-creation", "social-media", "chinese"],
+  "mcpServers": "./.mcp.json"
+}
